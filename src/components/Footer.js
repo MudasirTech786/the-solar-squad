@@ -13,15 +13,14 @@ export default function Footer() {
         <div>
           <div className="flex items-center space-x-3 mb-4">
             <Image
-              src="/TheSolarSquad2.png"
+              src="/tss.png"
               alt="The Solar Squad Logo"
-              width={50}
-              height={50}
+              width={100}
+              height={100}
               className="object-contain"
             />
             <div>
               <h2 className="text-xl font-bold leading-tight">The Solar Squad</h2>
-              <p className="text-xs text-gray-500">Solar & Roofing</p>
             </div>
           </div>
 
@@ -30,7 +29,7 @@ export default function Footer() {
 
           {/* Clickable button */}
           <Link
-            href="/"
+            href="/consultation"
             className="inline-block mt-4 border border-[#3b82f6] text-[#3b82f6] px-4 py-2 rounded hover:bg-[#3b82f6] hover:text-white transition"
           >
             Get Free Plan
