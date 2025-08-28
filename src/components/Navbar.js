@@ -152,9 +152,9 @@ export default function Navbar() {
       {showTopBtn && (
   <button
     onClick={scrollToTop}
-    className="fixed bottom-6 right-6 p-5 rounded-full bg-blue-600 text-white shadow-lg z-50 animate-bounce hover:animate-none hover:bg-blue-700 transition-colors duration-300"
+    className="fixed bottom-6 right-6 p-3 rounded-full bg-blue-600 text-white shadow-lg z-50 animate-bounce hover:animate-none hover:bg-blue-700 transition-colors duration-300"
   >
-    <ChevronUp size={36} />
+    <ChevronUp size={24} />
   </button>
 )}
 
