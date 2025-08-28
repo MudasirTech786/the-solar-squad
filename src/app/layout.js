@@ -1,8 +1,16 @@
-import { Inter, Plus_Jakarta_Sans } from "next/font/google";
+import { Inter, Plus_Jakarta_Sans, Poppins,Roboto   } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const jakarta = Plus_Jakarta_Sans({ subsets: ["latin"], variable: "--font-jakarta" });
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"], // you can choose what you need
+});
+const roboto = Roboto({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+});
 
 export const metadata = {
   title: "The Solar Squad",
@@ -20,9 +28,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.variable} ${jakarta.variable} antialiased bg-white text-slate-900`}>
-        {children}
-      </body>
+      <body suppressHydrationWarning={true} className="antialiased bg-white text-slate-900">
+  {children}
+</body>
+
     </html>
   );
 }
