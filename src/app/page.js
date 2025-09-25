@@ -36,11 +36,11 @@ export default function HomePage() {
             Cut Down Your DC Power Bills <br /> with Our No-Cost Solar Plans
           </h1>
 
-          <p
+          {/* <p
             className={`${roboto.className} mt-4 text-lg text-gray-200 max-w-2xl drop-shadow-md`}
           >
             March 6, 2024 · John Doe · Solar Rebates and Incentives
-          </p>
+          </p> */}
 
           <p
             className={`${roboto.className} mt-2 text-gray-100 max-w-xl drop-shadow-md`}
