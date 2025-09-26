@@ -19,17 +19,34 @@ export default function Consultation() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const { name, email, phone, message } = formData;
+
     if (!name || !email || !phone || !message) {
       alert("Please fill in all fields.");
       return;
     }
-    console.log("Form submitted:", formData);
-    setSubmitted(true);
-    setFormData({ name: "", email: "", phone: "", message: "" });
+
+    try {
+      const res = await fetch("/api/sendMail", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (res.ok) {
+        setSubmitted(true);
+        setFormData({ name: "", email: "", phone: "", message: "" });
+      } else {
+        alert("Failed to send. Please try again.");
+      }
+    } catch (error) {
+      console.error("Nodemailer error:", error);
+      alert("Error sending message.");
+    }
   };
+
 
   return (
     <>
